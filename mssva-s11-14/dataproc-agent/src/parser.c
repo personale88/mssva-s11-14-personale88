@@ -11,5 +11,6 @@ header_t parse_header(FILE *fp) {
     sec_log("record_count", hdr.record_count);
     sec_log("flags", hdr.flags);
 
-    return hdr;
+   sec_info("Header parsed successfully");
+ return hdr;
 }

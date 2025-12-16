@@ -4,8 +4,12 @@
 #include <string.h>
 #include <record.h>
 #include <common.h>
+#include <assert.h>
+
 
 char *process_record(record_t *rec, uint8_t flags) {
+    assert(rec->length < 4096);
+
     char *buf = malloc(rec->length + 1);
     if (!buf)
         return NULL;
